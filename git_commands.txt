@@ -1,0 +1,114 @@
+GIT COMMANDS USED IN THE ASSIGNMENT
+Repository: https://github.com/adx19/git-assignment
+=====================================================
+
+STEP 1: LOCAL SETUP
+-----------------------------------------------------
+mkdir git-assignment
+    Creates the project folder.
+
+cd git-assignment
+    Moves into the project folder.
+
+echo "text" > file
+    Creates a file with the given text (used for index.html, about.html, .gitignore).
+
+echo "text" >> file
+    Appends text to the end of an existing file.
+
+git init
+    Initializes a new empty Git repository in the current folder.
+
+git branch -M main
+    Renames the current branch to main.
+
+git config --global user.name "adx19"
+    Sets the author name used in commits.
+
+git config --global user.email "<email>"
+    Sets the author email used in commits.
+
+
+STEP 2: WORKFLOW (COMMITS, BRANCH, MERGE)
+-----------------------------------------------------
+git add .
+    Stages all new and modified files for the next commit.
+
+git add <file>
+    Stages one specific file for the next commit.
+
+git commit -m "message"
+    Saves the staged changes as a commit with a message.
+
+git branch feature
+    Creates a new branch named feature.
+
+git checkout feature
+    Switches to the feature branch.
+
+git checkout main
+    Switches back to the main branch.
+
+git merge feature --no-ff -m "Merge feature branch into main"
+    Merges feature into main and always creates a merge commit.
+
+git log --oneline --graph --all
+    Shows a compact commit history with a branch graph.
+
+
+STEP 3: .gitignore
+-----------------------------------------------------
+mkdir temp
+    Creates the temp folder used to test .gitignore.
+
+git status
+    Shows the state of the working directory and staging area
+    (used to confirm debug.log and temp/ are ignored).
+
+git add .gitignore
+    Stages the .gitignore file.
+
+git commit -m "Add .gitignore for log files and temp folder"
+    Commits the .gitignore file.
+
+
+STEP 4: UNDO OPERATION
+-----------------------------------------------------
+git commit -m "Extra commit to be undone"
+    Makes an additional commit that will be undone.
+
+git log --oneline
+    Shows the history in one line per commit (used before and after the undo).
+
+git reset --hard HEAD~1
+    Undoes the last commit and discards its changes.
+
+git status
+    Confirms the working tree is clean after the undo.
+
+
+STEP 5: GITHUB INTEGRATION
+-----------------------------------------------------
+git remote add origin https://github.com/adx19/git-assignment.git
+    Links the local repository to the GitHub repository.
+
+git remote -v
+    Lists the configured remote repositories and their URLs.
+
+git push -u origin main
+    Uploads the main branch to GitHub and sets it as upstream.
+
+git push origin feature
+    Uploads the feature branch to GitHub.
+
+
+STEP 6: COMMAND DOCUMENTATION FILE
+-----------------------------------------------------
+git add git_commands.txt
+    Stages this file.
+
+git commit -m "Add git_commands.txt"
+    Commits this file.
+
+git push
+    Uploads the new commit to GitHub.
