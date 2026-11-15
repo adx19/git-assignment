@@ -1,9 +1,8 @@
 GIT COMMANDS USED IN THE ASSIGNMENT
 Repository: https://github.com/adx19/git-assignment
-=====================================================
 
 STEP 1: LOCAL SETUP
------------------------------------------------------
+
 mkdir git-assignment
     Creates the project folder.
 
@@ -30,7 +29,7 @@ git config --global user.email "<email>"
 
 
 STEP 2: WORKFLOW (COMMITS, BRANCH, MERGE)
------------------------------------------------------
+
 git add .
     Stages all new and modified files for the next commit.
 
@@ -57,7 +56,7 @@ git log --oneline --graph --all
 
 
 STEP 3: .gitignore
------------------------------------------------------
+
 mkdir temp
     Creates the temp folder used to test .gitignore.
 
@@ -73,7 +72,7 @@ git commit -m "Add .gitignore for log files and temp folder"
 
 
 STEP 4: UNDO OPERATION
------------------------------------------------------
+
 git commit -m "Extra commit to be undone"
     Makes an additional commit that will be undone.
 
@@ -88,7 +87,7 @@ git status
 
 
 STEP 5: GITHUB INTEGRATION
------------------------------------------------------
+
 git remote add origin https://github.com/adx19/git-assignment.git
     Links the local repository to the GitHub repository.
 
@@ -103,7 +102,7 @@ git push origin feature
 
 
 STEP 6: COMMAND DOCUMENTATION FILE
------------------------------------------------------
+
 git add git_commands.txt
     Stages this file.
 
@@ -112,3 +111,5 @@ git commit -m "Add git_commands.txt"
 
 git push
     Uploads the new commit to GitHub.
+
+
